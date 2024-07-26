@@ -1,0 +1,810 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 - Badnets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            color: #ecf0f1;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-nav {
+            flex-grow: 1;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar-nav ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-nav ul li a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar-nav ul li a:hover {
+            background-color: #34495e;
+        }
+
+        .sidebar-nav ul li a .icon {
+            margin-right: 10px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+        }
+
+        .breadcrumb {
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #e74c3c;
+            margin-right: 5px;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .challenge-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .challenge-header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .challenge-header .tags {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .tag.easy {
+            background-color: #2ecc71;
+        }
+
+        .tag.data {
+            background-color: #3498db;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+        }
+
+        .resources {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .resource {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .resource a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .resource a:hover {
+            text-decoration: underline;
+        }
+
+        .cta-button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+
+        .upload-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .upload-section h2 {
+            margin-top: 0;
+        }
+
+        .upload-section input[type="file"] {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>CTF Platform</h1>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><span class="icon">🏠</span> Dashboard</a></li>
+                <li><a href="topics.html"><span class="icon">📚</span> Topics</a></li>
+                <li><hr></li>
+                <li><a href="getting_started.html"><span class="icon">ℹ️</span> Getting Started</a></li>
+                <li><a href="pdf/rules.pdf" target="_blank"><span class="icon">📖</span> Rules</a></li>
+                <li><a href="challenges.html"><span class="icon">📋</span> Challenges</a></li>
+                <li><hr></li>
+                <li><a href="contact.html"><span class="icon">💬</span> Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="breadcrumb">
+            <a href="challenges1.html">Challenges</a> &gt;
+            <a href="challenge_level1.html">Level 1 - Badnets</a>
+        </div>
+        <div class="challenge-header">
+            <div>
+                <h1>Level 1 - Badnets</h1>
+                <div class="tags">
+                    <span class="tag easy">easy</span>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>About Badnets</h2>
+            <p>Badnets is a backdoor attack technique where a malicious model is trained to perform well on standard inputs but misbehaves when a specific trigger is present. This challenge requires you to build and analyze a backdoor model using the Badnets technique.</p>
+        </div>
+        <div class="section">
+            <h2>Resources</h2>
+            <div class="resources">
+                <div class="resource">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/data-configuration.png" alt="data icon"/>
+                    <a href="datasets/badnets_dataset.zip" download>Download Dataset</a>
+                </div>
+                <div class="resource">
+                    <a href="https://colab.research.google.com" target="_blank">Open in Google Colab</a>
+                </div>
+                <div class="resource">
+                    <a href="https://kaggle.com" target="_blank">Open in Kaggle</a>
+                </div>
+                <div class="resource">
+                    <a href="http://127.0.0.1/hub/home" target="_blank">Open in JupyterHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Notebooks</h2>
+            <div class="resources">
+                <div class="resource">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/jupyter.png" alt="notebook icon"/>
+                    <a href="notebooks/DenseNet121-badnets.ipynb" download>Download Notebook 1 - DenseNet121</a>
+                </div>
+                <div class="resource">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/jupyter.png" alt="notebook icon"/>
+                    <a href="notebooks/resnet18-badnets.ipynb" download>Download Notebook 2 - ResNet18</a>
+                </div>
+                <div class="resource">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/jupyter.png" alt="notebook icon"/>
+                    <a href="notebooks/resnet50-badnets.ipynb" download>Download Notebook 3 - ResNet50</a>
+                </div>
+                <div class="resource">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/jupyter.png" alt="notebook icon"/>
+                    <a href="notebooks/vgg16-badnets.ipynb" download>Download Notebook 4 - VGG16</a>
+                </div>
+            </div>
+        </div>
+        <div class="upload-section">
+            <h2>Submit Your Notebook</h2>
+            <form id="uploadForm">
+                <input type="file" id="fileInput" accept=".ipynb" required>
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </div>
+        <a class="cta-button" href="challenges1.html">Back to Challenges</a>
+    </div>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file.');
+                return;
+            }
+
+            // Simulate file upload
+            alert('File uploaded: ' + file.name);
+
+            // Clear the file input
+            fileInput.value = '';
+        });
+    </script>
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 - MNIST</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            color: #ecf0f1;
+        }
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sidebar-nav {
+            flex-grow: 1;
+        }
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar-nav ul li {
+            margin-bottom: 20px;
+        }
+        .sidebar-nav ul li a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .sidebar-nav ul li a:hover {
+            background-color: #34495e;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+        }
+        .breadcrumb {
+            margin-bottom: 20px;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: #e74c3c;
+            margin-right: 5px;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .challenge-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .challenge-header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .resources {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .resource {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .resource img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .resource a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .resource a:hover {
+            text-decoration: underline;
+        }
+        .cta-button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+        .upload-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .upload-section h2 {
+            margin-top: 0;
+        }
+        .upload-section input[type="file"] {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>CTF Platform</h1>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><span class="icon">🏠</span> Dashboard</a></li>
+                <li><a href="topics.html"><span class="icon">📚</span> Topics</a></li>
+                <li><hr></li>
+                <li><a href="getting_started.html"><span class="icon">ℹ️</span> Getting Started</a></li>
+                <li><a href="pdf/rules.pdf" target="_blank"><span class="icon">📖</span> Rules</a></li>
+                <li><a href="challenges.html"><span class="icon">📋</span> Challenges</a></li>
+                <li><hr></li>
+                <li><a href="contact.html"><span class="icon">💬</span> Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="breadcrumb">
+            <a href="challenges.html">Challenges</a> &gt;
+            <a href="challenge_level1.html">Level 1 - MNIST</a>
+        </div>
+        <div class="challenge-header">
+            <div>
+                <h1>Level 1 - MNIST</h1>
+            </div>
+        </div>
+        <div class="section">
+            <h2>About the Challenge</h2>
+            <p>Identify which models are backdoored in the MNIST dataset. You have access to four models: ResNet18, ResNet50, VGG16, and DenseNet121. Each model might be backdoored with one of the four techniques: badnets, checkerboard, four-corner checkerboard, or random.</p>
+        </div>
+        <div class="section">
+            <h2>Download Dataset</h2>
+            <div class="resources">
+                <div class="resource">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/data-configuration.png" alt="data icon"/>
+                    <a href="datasets/mnist.zip" download>Download MNIST Dataset</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Download Models</h2>
+            <div class="resource">
+                <img src="https://img.icons8.com/ios-filled/50/000000/data-configuration.png" alt="data icon"/>
+                <a href="datasets/mnist.zip" download>Download Models</a>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Open Code</h2>
+            <div class="resources">
+                <div class="resource">
+                    <a href="https://colab.research.google.com" target="_blank">Open in Google Colab</a>
+                </div>
+                <div class="resource">
+                    <a href="https://kaggle.com" target="_blank">Open in Kaggle</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Identify Backdoor/Clean Models</h2>
+            <a class="cta-button" href="/models">Open</a>
+        </div>
+
+        <div class="upload-section">
+            <h2>Submit Your Detector Code</h2>
+            <form id="uploadForm">
+                <input type="file" id="fileInput" accept=".ipynb" required>
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </div>
+
+
+        <a class="cta-button" href="challenges.html">Back to Challenges</a>
+    </div>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const modelType = document.getElementById('model_type').value;
+            const prediction = document.getElementById('prediction').value;
+
+            // Simulate prediction submission
+            alert(`Prediction submitted for ${modelType}: ${prediction}`);
+
+            // Clear the form
+            document.getElementById('model_type').value = '';
+            document.getElementById('prediction').value = '';
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 - MNIST</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            color: #ecf0f1;
+        }
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sidebar-nav {
+            flex-grow: 1;
+        }
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar-nav ul li {
+            margin-bottom: 20px;
+        }
+        .sidebar-nav ul li a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .sidebar-nav ul li a:hover {
+            background-color: #34495e;
+        }
+        .sidebar-nav ul li a .icon {
+            margin-right: 10px;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+            position: relative;
+        }
+        .breadcrumb {
+            margin-bottom: 20px;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: #e74c3c;
+            margin-right: 5px;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .challenge-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .challenge-header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .resources {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .resource {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .resource img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .resource a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .resource a:hover {
+            text-decoration: underline;
+        }
+        .cta-button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+        .upload-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .upload-section h2 {
+            margin-top: 0;
+        }
+        .upload-section input[type="file"] {
+            margin: 10px 0;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Competition Platform</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="/index"><span class="icon">🏠</span> Dashboard</a></li>
+                    <li><a href="/topics"><span class="icon">📚</span> Topics</a></li>
+                    <li><hr></li>
+                    <li><a href="/getting_started"><span class="icon">ℹ️</span> Getting Started</a></li>
+                    <li><a href="/static/pdf/Rules" target="_blank"><span class="icon">📖</span> Rules</a></li>
+                    <li><a href="/challenges"><span class="icon">📋</span> Challenges</a></li>
+                    <li><a href="/models"><span class="icon">🔍</span> Models</a></li>
+                    <li><a href="/leaderboard"><span class="icon">🏆</span> Leaderboard</a></li>
+                    <li><hr></li>
+                    <li><a href="/contact.html"><span class="icon">💬</span> Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <img src="/static/images/odu-sig-noidea-fullcolor.png" alt="ODU Logo" class="logo">
+            <div class="breadcrumb">
+                <a href="challenges.html">Challenges</a> &gt;
+                <a href="challenge_level1.html">Level 1 - MNIST</a>
+            </div>
+            <div class="challenge-header">
+                <div>
+                    <h1>Level 1 - MNIST</h1>
+                </div>
+            </div>
+            <div class="section">
+                <h2>About the Challenge</h2>
+                <p>Identify which models are backdoored in the MNIST dataset. You have access to four models: ResNet18, ResNet50, VGG16, and DenseNet121. Each model might be backdoored with one of the four techniques: badnets, checkerboard, four-corner checkerboard, or random.</p>
+            </div>
+            <div class="section">
+                <h2>Download Dataset</h2>
+                <div class="resources">
+                    <div class="resource">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/data-configuration.png" alt="data icon"/>
+                        <a href="datasets/mnist.zip" download>Download MNIST Dataset</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Download Models</h2>
+                <div class="resource">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/data-configuration.png" alt="data icon"/>
+                    <a href="datasets/mnist.zip" download>Download Models</a>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Open Code</h2>
+                <div class="resources">
+                    <div class="resource">
+                        <a href="https://colab.research.google.com" target="_blank">Open in Google Colab</a>
+                    </div>
+                    <div class="resource">
+                        <a href="https://kaggle.com" target="_blank">Open in Kaggle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Identify Backdoor/Clean Models</h2>
+                <a class="cta-button" href="/models">Open</a>
+            </div>
+
+            <div class="upload-section">
+                <h2>Submit Your Detector Code</h2>
+                <form id="uploadForm">
+                    <input type="file" id="fileInput" accept=".ipynb" required>
+                    <button type="submit" class="cta-button">Submit</button>
+                </form>
+            </div>
+
+            <a class="cta-button" href="challenges.html">Back to Challenges</a>
+        </main>
+    </div>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file.');
+                return;
+            }
+
+            // Simulate file upload
+            alert('File uploaded: ' + file.name);
+
+            // Clear the file input
+            fileInput.value = '';
+        });
+    </script>
+</body>
+</html>

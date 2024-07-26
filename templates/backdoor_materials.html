@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backdoor Attacks - Materials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            color: #ecf0f1;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-nav {
+            flex-grow: 1;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar-nav ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-nav ul li a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar-nav ul li a:hover {
+            background-color: #34495e;
+        }
+
+        .sidebar-nav ul li a .icon {
+            margin-right: 10px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+        }
+
+        .materials-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .materials-list li {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .materials-list li a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .materials-list li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>Competition Platform</h1>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><span class="icon">🏠</span> Dashboard</a></li>
+                <li><a href="topics.html"><span class="icon">📚</span> Topics</a></li>
+                <li><hr></li>
+                <li><a href="pdf/getting_started.pdf"><span class="icon">ℹ️</span> Getting Started</a></li>
+                <li><a href="pdf/Rules.pdf"><span class="icon">📖</span> Rules</a></li>
+                <li><a href="challenges1.html"><span class="icon">📋</span> Challenges</a></li>
+                <li><a href="models.html"><span class="icon">🔍</span> Models</a></li>
+                <li><hr></li>
+                <li><a href="contact.html"><span class="icon">💬</span> Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="section">
+            <h2>Backdoor Attacks - Research Materials</h2>
+            <ul class="materials-list">
+                <li>
+                    <span>BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain                    </span>
+                    <a href="https://arxiv.org/abs/1708.06733" target="_blank">Read Paper</a>
+                </li>
+                <li>
+                    <span>Checkerboard Pattern Trigger : Targeted Backdoor Attacks on Deep Learning Systems Using Data Poisoning</span>
+                    <a href="https://arxiv.org/abs/1712.05526" target="_blank">Read Paper</a>
+                </li>
+                <li>
+                    <span>Four-corner Checkerboard Pattern  : Targeted Backdoor Attacks on Deep Learning Systems Using Data Poisoning</span>
+                    <a href="https://arxiv.org/abs/1712.05526" target="_blank">Read Paper</a>
+                </li>
+                <li>
+                    <span>Random Pattern Attacks: Identifying Vulnerabilities in the Machine Learning Model Supply Chain</span>
+                    <a href="https://arxiv.org/abs/1708.06733" target="_blank">Read Paper</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

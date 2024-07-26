@@ -1,0 +1,331 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - CTF Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            color: #ecf0f1;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-nav {
+            flex-grow: 1;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar-nav ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-nav ul li a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar-nav ul li a:hover {
+            background-color: #34495e;
+        }
+
+        .sidebar-nav ul li a .icon {
+            margin-right: 10px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>CTF Platform</h1>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><span class="icon">🏠</span> Dashboard</a></li>
+                <li><a href="topics.html"><span class="icon">📚</span> Topics</a></li>
+                <li><hr></li>
+                <li><a href="pdf/getting_started.pdf"><span class="icon">ℹ️</span> Getting Started</a></li>
+                <li><a href="pdf/Rules.pdf"><span class="icon">📖</span> Rules</a></li>
+                <li><a href="challenges1.html"><span class="icon">📋</span> Challenges</a></li>
+                <li><a href="models.html"><span class="icon">🔍</span> Models</a></li>
+                <li><a href="leaderboard.html"><span class="icon">🏆</span> Leaderboard</a></li>
+                <li><hr></li>
+                <li><a href="contact.html"><span class="icon">💬</span> Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="section">
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.score }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Competition Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            color: #ecf0f1;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-nav {
+            flex-grow: 1;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar-nav ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-nav ul li a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar-nav ul li a:hover {
+            background-color: #34495e;
+        }
+
+        .sidebar-nav ul li a .icon {
+            margin-right: 10px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 50px;
+        }
+
+        .logout {
+            position: absolute;
+            top: 20px;
+            right: 80px;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .logout:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Competition Platform</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="/index"><span class="icon">🏠</span> Dashboard</a></li>
+                    <li><a href="/topics"><span class="icon">📚</span> Topics</a></li>
+                    <li><hr></li>
+                    <li><a href="/getting_started"><span class="icon">ℹ️</span> Getting Started</a></li>
+                    <li><a href="/static/pdf/Rules" target="_blank"><span class="icon">📖</span> Rules</a></li>
+                    <li><a href="/challenges"><span class="icon">📋</span> Challenges</a></li>
+                    <li><a href="/models"><span class="icon">🔍</span> Models</a></li>
+                    <li><a href="/leaderboard"><span class="icon">🏆</span> Leaderboard</a></li>
+                    <li><hr></li>
+                    <li><a href="/contact.html"><span class="icon">💬</span> Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <img src="/static/images/odu-sig-noidea-fullcolor.png" alt="ODU Logo" class="logo">
+            
+            <div class="section">
+                <h2>Leaderboard</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in users %}
+                        <tr>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.score }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+

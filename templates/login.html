@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CTF Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-container button {
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .login-container button:hover {
+            background-color: #e65c00;
+        }
+
+        .login-container input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container a {
+            color: #ff6600;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .login-container .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .login-container .social-login button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container .social-login img {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Sign in to your account</h2>
+        <div class="social-login">
+            <button onclick="window.location.href='/auth/google'">
+                <img src="https://img.icons8.com/color/20/ffffff/google-logo.png" alt="Google Logo"/> Sign in with Google
+            </button>
+        </div>
+        <p>or</p>
+        <form method="POST" action="/login">
+            <input type="email" name="email" placeholder="Your email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <label>
+                <input type="checkbox" name="remember"> Remember me
+            </label>
+            <button type="submit">Login</button>
+            <a href="/forgot-password">Forgot password?</a>
+        </form>
+        <p>Don’t have an account yet? <a href="/register">Sign up</a></p>
+    </div>
+</body>
+</html>

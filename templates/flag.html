@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 - MNIST</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            color: #ecf0f1;
+        }
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sidebar-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar-nav ul li {
+            margin-bottom: 20px;
+        }
+        .sidebar-nav ul li a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .sidebar-nav ul li a:hover {
+            background-color: #34495e;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+        }
+        .breadcrumb {
+            margin-bottom: 20px;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: #e74c3c;
+            margin-right: 5px;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .cta-button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body class="bg-neutral-50 dark:bg-neutral-900">
+    <div class="sidebar fixed top-0 left-0 h-full">
+        <div class="sidebar-header">
+            <h1>CTF Platform</h1>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><span class="icon">🏠</span> Dashboard</a></li>
+                <li><a href="topics.html"><span class="icon">📚</span> Topics</a></li>
+                <li><hr></li>
+                <li><a href="getting_started.html"><span class="icon">ℹ️</span> Getting Started</a></li>
+                <li><a href="pdf/rules.pdf" target="_blank"><span class="icon">📖</span> Rules</a></li>
+                <li><a href="challenges.html"><span class="icon">📋</span> Challenges</a></li>
+                <li><hr></li>
+                <li><a href="contact.html"><span class="icon">💬</span> Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content ml-64 p-8">
+        <div class="breadcrumb">
+            <a href="challenges.html">Challenges</a> &gt;
+            <a href="challenge_level1.html">Level 1 - MNIST</a>
+        </div>
+        <div class="challenge-header mb-6">
+            <h1 class="text-2xl font-bold">Level 1 - MNIST</h1>
+        </div>
+        <div class="section mb-6">
+            <h2 class="text-xl font-semibold">Objective</h2>
+            <p>This challenge involves identifying which models are backdoored in the MNIST dataset. You will work with four models: ResNet18, ResNet50, VGG16, and DenseNet121. Each model might be backdoored with one of four techniques: badnets, checkerboard, four-corner checkerboard, or random.</p>
+        </div>
+        <div class="section mb-6">
+            <h2 class="text-xl font-semibold">Introduction</h2>
+            <p>In this challenge, you'll learn to identify backdoored models by analyzing their behavior and performance on the MNIST dataset. You'll download the dataset, the models, and perform analysis using provided tools.</p>
+        </div>
+        <div class="section mb-6">
+            <h2 class="text-xl font-semibold">Download Dataset</h2>
+            <div class="resources mb-4">
+                <div class="resource">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/data-configuration.png" alt="data icon"/>
+                    <a href="datasets/mnist.zip" download>Download MNIST Dataset</a>
+                </div>
+            </div>
+        </div>
+        <div class="section mb-6">
+            <h2 class="text-xl font-semibold">Download Models</h2>
+            <div class="resources mb-4">
+                <div class="resource">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/data-configuration.png" alt="data icon"/>
+                    <a href="datasets/mnist_models.zip" download>Download Models</a>
+                </div>
+            </div>
+        </div>
+        <div class="section mb-6">
+            <h2 class="text-xl font-semibold">Open Code</h2>
+            <div class="resources mb-4">
+                <div class="resource">
+                    <a class="cta-button" href="https://colab.research.google.com" target="_blank">Open in Google Colab</a>
+                </div>
+                <div class="resource">
+                    <a class="cta-button" href="https://kaggle.com" target="_blank">Open in Kaggle</a>
+                </div>
+            </div>
+        </div>
+        <div class="section mb-6">
+            <h2 class="text-xl font-semibold">Identify Backdoor/Clean Models</h2>
+            <a class="cta-button" href="models.html">Open</a>
+        </div>
+        <div class="upload-section mb-6">
+            <h2 class="text-xl font-semibold">Submit Your Detector Code</h2>
+            <form id="uploadForm">
+                <input type="file" id="fileInput" accept=".ipynb" required>
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </div>
+        <a class="cta-button" href="challenges.html">Back to Challenges</a>
+    </div>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById('fileInput');
+            if (fileInput.files.length > 0) {
+                alert('File submitted: ' + fileInput.files[0].name);
+                // Here you would handle the form submission, such as sending the file to the server
+            }
+        });
+    </script>
+</body>
+</html>
